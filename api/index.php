@@ -5,42 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Conference Registration Form</title>
+    <title>Registration Form</title>
 </head>
 
 <body>
     <div class="form-container">
-        <h1>Conference Registration</h1>
-        <form action="pg_process.php" method="POST">
-            <input type="hidden" name="form_type" value="pg_form">
+        <h1>Registration Form</h1>
+        <form action="" method="POST">
+            <p>Personal Information:</p>
 
-            Personal Information
             <label for="name">Full Name:</label>
-            <input type="text" name="name" required><br>
+            <input name="name" type="text" required><br>
 
             <label for="title">Title:</label>
-            <select name="title" required>
-                <option value="Dr.">Dr.</option>
-                <option value="Prof.">Prof.</option>
+            <select name="title">
                 <option value="Mr.">Mr.</option>
                 <option value="Ms.">Ms.</option>
+                <option value="Mrs.">Mrs.</option>
             </select><br>
 
             <label for="gender">Gender:</label>
-            <input type="radio" name="gender" value="Male" required> Male
-            <input type="radio" name="gender" value="Female"> Female
-            <input type="radio" name="gender" value="Other"> Other<br>
+            <input type="radio" name="gender" value="Male" required>Male
+            <input type="radio" name="gender" value="Female">Female
+            <input type="radio" name="gender" value="Others">Others<br>
 
-            <label for="affiliation">Affiliation/Institution:</label>
-            <input type="text" name="affiliation" placeholder="Name of the hospital, university, or organization" required><br>
-
-            <label for="department">Department:</label>
-            <input type="text" name="department" placeholder="Specific department within the institution" required><br>
-
-            <label for="designation">Designation/Position:</label>
-            <input type="text" name="designation" required><br>
-
-            Address Information
+            <p>Address Information:</p>
             <label for="street_address">Street Address:</label>
             <input type="text" name="street_address" required><br>
 
@@ -53,22 +42,19 @@
             <label for="postal_zip_code">Postal/Zip Code:</label>
             <input type="text" name="postal_zip_code" required><br>
 
-            <label for="country">Country:</label>
-            <input type="text" name="country" required><br>
-
-            Contact Information
-            <label for="email">Email Address:</label>
+            <p>Contact Information:</p>
+            <label for="email">Email:</label>
             <input type="email" name="email" required><br>
 
-            <label for="phone_number">Phone Number (with country code):</label>
-            <input type="text" name="phone_number" required><br>
+            <label for="phone">Phone:</label>
+            <input type="text" name="phone" required><br>
 
-            <br />
-            <button type="submit" class="ticket_add_to_cart button">Submit & Proceed to Pay</button>
+            <button type="submit" name="Submit">Submit</button><br>
         </form>
     </div>
 </body>
 </html>
+
 <?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
