@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Form</title>
+</head>
+<body>
+    <div id="form-container"></div>
+    <script>
+        fetch('reg_form.php')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('form-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error fetching form:', error);
+            });
+    </script>
+</body>
+</html>
