@@ -3,12 +3,24 @@
     "api/*.php": {
       "runtime": "vercel-php@0.7.3"
     }
+    
   },
-  {
-    "trailingSlash": true
-  },
+  
   "routes": [
     { "src": "/(.*)",  "dest": "/api/index.php" }
    
+  ]
+  
+}, 
+{
+  "trailingSlash": true
+},
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "**/*",
+      "use": "@vercel/static"
+    }
   ]
 }
