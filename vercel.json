@@ -20,7 +20,7 @@
   "builds": [
     {
       "src": "**/*",
-      "use": "@vercel/static"
+      "use": "@vercel/css"
     }
   ]
 }
