@@ -1,0 +1,10 @@
+name: regform # Replace with your app name
+env: production # Set to production for deployment
+services:
+  web:
+    type: web-service
+    plan: free
+    env:
+      # Add environment variables here
+    build_command: npm run build # Or yarn build, or any other build command
+    start_command: npm start # Or any other start command
