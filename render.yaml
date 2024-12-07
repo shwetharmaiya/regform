@@ -1,10 +1,10 @@
-name: regform # Replace with your app name
-env: production # Set to production for deployment
+version: 2
 services:
-  web:
+  web-service:
     type: web-service
-    plan: free
+    build: .
     env:
-      # Add environment variables here
-    build_command: npm run build # Or yarn build, or any other build command
-    start_command: npm start # Or any other start command
+      # Add any environment variables here
+    port: 8080
+    # Optional: Configure a custom domain name
+    # domain: my-app.onrender.com
