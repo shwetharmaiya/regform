@@ -18,7 +18,7 @@ RUN apk add --no-cache \
     && docker-php-ext-install mysqli pdo pdo_mysql
 
 # Expose the port for the PHP-FPM service
-EXPOSE 80
+EXPOSE 8080
 
 # Start the PHP-FPM service
 CMD ["php-fpm"]
